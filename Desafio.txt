@@ -1,0 +1,38 @@
+Olá!
+Chegamos na etapa do teste prático para a vaga de Analytics Engineer. 
+Neste momento, esperamos que você seja capaz de resolver um desafio baseado em um cenário proposto, para que possamos avaliar você tecnicamente. 
+Entregável
+Esperamos receber o seu desafio da seguinte forma:
+●	O código do seu projeto precisa estar disponível no Github (precisa ser público);
+●	Se você utilizar notebooks, nos mostre sua linha de raciocínio, contando a história dos seus passos;
+●	Se o processo utilizar múltiplas etapas, explique a arquitetura envolvida para que possamos entender melhor o fluxo;
+Lembre-se: não há solução certa ou errada. Existem diversas maneiras diferentes de alcançar o mesmo objetivo e o importante neste desafio, é conseguirmos avaliar sua linha de raciocínio, a clareza do seu código, o nível de organização dos seus projetos e sua criatividade.
+Critérios de avaliação
+1.	Manutenibilidade;
+2.	Simplicidade;
+3.	Testabilidade;
+4.	Documentação;
+Se tiver qualquer dúvida é só perguntar, ligar, entrar em contato ou enviar sinais de fumaça - estaremos à disposição.
+
+Um abraço e sucesso,
+Time Pismo 
+Cenário
+Considere um fluxo onde necessitamos saber a cotação diária do café em 4 moedas (Real - BRL, Euro - EUR e Peso Chileno - CLP), da consulta diária do câmbio de 4 moedas distintas e como o mesmo vem sofrendo alterações nos últimos 3 anos.
+O desafio
+Dado o contexto acima, queremos que você desenvolva uma solução capaz de consumir uma api (https://currencylayer.com/) onde podemos encontrar o câmbios de 4 moedas (Real - BRL, Euro - EUR e Peso Chileno - CLP)  nos últimos 30 dias . Esses dados devem ser estruturados (Moeda, Câmbio e Data) e persistidos em uma base relacional (SQLite por exemplo).
+ Após a persistência, uma consulta SQL deve ser realizada cruzando as informações da base coffee trazendo as seguintes informações:
+-	Maior volume negociado de café no dia e as cotações de fechamento
+-	Total de café negociado por ano e as cotações
+-	Média de volume negociado mensal e anual 
+ O resultado da query deve ser salvo em um drive (google drive), em seguida necessitamos que seja gerado um painel apresentando 3 big numbers que seriam o câmbio atual das 4 moedas e um histórico de alteração das quatro moedas nos últimos 3 anos.
+Observações técnicas importantes
+1.	Use Python e SQL;
+2.	O formato de saída dos arquivos deve ser csv;
+3.	Para a geração do painel pode ser usada qualquer ferramenta de BI (PowerBI, Data Studio, etc.) que possua uma versão free e possa ser compartilhada para que validem;
+
+Dicas úteis
+Aqui vão algumas dicas que podem lhe ajudar no desafio:
+●	Qualquer outra API pode ser utilizada, contanto que apresente os dados solicitados
+●	Existem formas de gerar estruturas de banco de dados dentro da própria sessão do notebook.
+●	As apis free normalmente possuem um limite de requisições, logo será necessário deixar uma quantidade de requisições no token gerado para que possamos testar a solução.
+
